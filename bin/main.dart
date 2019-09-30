@@ -19,6 +19,7 @@ class Link {
 main() {
   // Exercise 2:  Create the object structure shown in the above link
   // including the variable called 'firstLink'
+  Link y = Link('Raj , Makiko, Paul');
 }
 
 // Exercise 3: Create a function which takes a Link parameter and prints out
