@@ -7,15 +7,19 @@
 // like this:
 // https://s1.whiteboardfox.com/s/2ae37dc832647bad.png
 
+class Link {
+  String firstLink;
+  String secondLink;
 
-
+  Link(String x) {
+    this.firstLink = x;
+  }
+}
 
 main() {
   // Exercise 2:  Create the object structure shown in the above link
   // including the variable called 'firstLink'
-
 }
-
 
 // Exercise 3: Create a function which takes a Link parameter and prints out
 // all the values in the list.  For example, if the function is given the
@@ -24,11 +28,9 @@ main() {
 // Makiko
 // Paul
 
-
 // Exercise 4: Create a function which takes a Link parameter and a String
 // parameter, and adds another link to the end of the chain.  The new link
 // value should be the String parameter passed into the function.typedef
-
 
 // *** Stretch ****
 // Exercise 5: Create a function called insert which takes a Link,
