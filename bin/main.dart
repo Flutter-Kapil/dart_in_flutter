@@ -28,7 +28,9 @@ main() {
 // Raj
 // Makiko
 // Paul
-
+void printFirstLink(Link x) {
+  print(x.firstLink);
+}
 // Exercise 4: Create a function which takes a Link parameter and a String
 // parameter, and adds another link to the end of the chain.  The new link
 // value should be the String parameter passed into the function.typedef
