@@ -8,18 +8,23 @@
 // https://s1.whiteboardfox.com/s/2ae37dc832647bad.png
 
 class Link {
-  String firstLink;
-  String secondLink;
-
-  Link(String x) {
-    this.firstLink = x;
-  }
+  var next;
+  var value;
 }
 
 main() {
   // Exercise 2:  Create the object structure shown in the above link
   // including the variable called 'firstLink'
-  Link y = Link('Raj , Makiko, Paul');
+  Link firstLink = Link();
+  firstLink.value = 'Raj';
+  firstLink.next = Link();
+  firstLink.next.value = 'Makiko';
+  firstLink.next.next = Link();
+  firstLink.next.next.value = 'Paul';
+
+  printFirstLink(firstLink);
+  String y = 'kapil';
+  add2Link(firstLink, y);
 }
 
 // Exercise 3: Create a function which takes a Link parameter and prints out
@@ -29,13 +34,18 @@ main() {
 // Makiko
 // Paul
 void printFirstLink(Link x) {
-  print(x.firstLink);
+  print(x.value);
+  print(x.next.value);
+  print(x.next.next.value);
+  print(x.next.next.next);
 }
+
 // Exercise 4: Create a function which takes a Link parameter and a String
 // parameter, and adds another link to the end of the chain.  The new link
 // value should be the String parameter passed into the function.typedef
-String add2Link(Link x, String y){
-  return x.firstLink + ', ' + y;
+String add2Link(Link x, String y) {
+  x.next.next.next = Link();
+  return (x.next.next.next.value = y);
 }
 // *** Stretch ****
 // Exercise 5: Create a function called insert which takes a Link,
