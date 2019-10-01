@@ -23,7 +23,7 @@ main() {
   firstLink.next.next.value = 'Paul';
 
   String y = 'kapil';
-  add2Link(firstLink, y);
+  add2FirstLink(firstLink, y);
 
   printFirstLink(firstLink);
 }
@@ -35,18 +35,21 @@ main() {
 // Makiko
 // Paul
 void printFirstLink(Link x) {
-  print(x.value);
-  print(x.next.value);
-  print(x.next.next.value);
-  print(x.next.next.next.value);
+  while (x != null) {
+    print(x.value);
+    x = x.next;
+  }
 }
 
 // Exercise 4: Create a function which takes a Link parameter and a String
 // parameter, and adds another link to the end of the chain.  The new link
 // value should be the String parameter passed into the function.typedef
-String add2Link(Link x, String y) {
-  x.next.next.next = Link();
-  return (x.next.next.next.value = y);
+void add2FirstLink(Link x, String z) {
+  while (x != null) {
+    x = x.next;
+  }
+  x = Link();
+  x.value = z;
 }
 // *** Stretch ****
 // Exercise 5: Create a function called insert which takes a Link,
