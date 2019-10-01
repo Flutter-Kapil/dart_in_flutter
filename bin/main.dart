@@ -22,10 +22,10 @@ main() {
   firstLink.next.next = Link();
   firstLink.next.next.value = 'Paul';
 
+  printFirstLink(firstLink);
+  print('----------');
   String y = 'kapil';
   add2FirstLink(firstLink, y);
-
-  printFirstLink(firstLink);
 }
 
 // Exercise 3: Create a function which takes a Link parameter and prints out
@@ -50,6 +50,7 @@ void add2FirstLink(Link x, String z) {
   }
   x = Link();
   x.value = z;
+  print(x.value);
 }
 // *** Stretch ****
 // Exercise 5: Create a function called insert which takes a Link,
