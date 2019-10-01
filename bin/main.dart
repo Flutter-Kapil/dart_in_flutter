@@ -22,9 +22,10 @@ main() {
   firstLink.next.next = Link();
   firstLink.next.next.value = 'Paul';
 
-  printFirstLink(firstLink);
   String y = 'kapil';
   add2Link(firstLink, y);
+
+  printFirstLink(firstLink);
 }
 
 // Exercise 3: Create a function which takes a Link parameter and prints out
@@ -37,7 +38,7 @@ void printFirstLink(Link x) {
   print(x.value);
   print(x.next.value);
   print(x.next.next.value);
-  print(x.next.next.next);
+  print(x.next.next.next.value);
 }
 
 // Exercise 4: Create a function which takes a Link parameter and a String
