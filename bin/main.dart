@@ -29,8 +29,10 @@ void main() {
     ..left(char('-').trim(), (a, op, b) => a - b);
 
   final parser = builder.build().end();
-  String fromButtons = ""; // add all the strings as soon as user taps on = and pass it
+  String fromButtons =
+      ""; // add all the strings as soon as user taps on = and pass it
   //to below function for solution
   var finalOutput = parser.parse('24*(2)');
   print(finalOutput);
+  // above example from https://github.com/petitparser/dart-petitparser#writing-a-more-complicated-grammar
 }
